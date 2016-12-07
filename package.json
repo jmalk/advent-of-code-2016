@@ -20,5 +20,12 @@
   "devDependencies": {
     "jasmine": "^2.5.2",
     "standard": "^8.6.0"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect"
+    ]
   }
 }
