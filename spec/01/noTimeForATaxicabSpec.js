@@ -5,5 +5,9 @@ describe('Rectilinear distance calculator', function () {
     var instructions = 'R2, L3'
     var distance = rectilinearDistanceFromOrigin(instructions)
     expect(distance).toBe(5)
+
+    instructions = 'R2, R2, R2'
+    distance = rectilinearDistanceFromOrigin(instructions)
+    expect(distance).toBe(2)
   })
 })
