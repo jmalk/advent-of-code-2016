@@ -13,7 +13,7 @@ module.exports = function (instructions) {
     walk(arr[1])
   }
 
-  function changeDirection(letter) {
+  function changeDirection (letter) {
     if (letter === 'R') {
       orientation = CARDINAL_DIRECTIONS[(CARDINAL_DIRECTIONS.indexOf(orientation) + 1) % 4]
     } else if (letter === 'L') {
