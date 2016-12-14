@@ -1,4 +1,4 @@
-var rectilinearDistanceFromOrigin = require('../../src/01/noTimeForATaxicab')
+var rectilinearDistanceFromOrigin = require('../../src/01/rectilinearDistanceCalculator')
 
 describe('Rectilinear distance calculator', function () {
   it('Takes a set of instructions and tells you how far they will take you from your location', function () {
