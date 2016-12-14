@@ -1,6 +1,5 @@
 module.exports = function (instructions) {
-  const CARDINAL_DIRECTIONS = ['North', 'East', 'South', 'West']
-  var orientation = CARDINAL_DIRECTIONS[0]
+  var orientation = 0
   var x = 0
   var y = 0
 
@@ -15,20 +14,20 @@ module.exports = function (instructions) {
 
   function changeDirection (letter) {
     if (letter === 'R') {
-      orientation = CARDINAL_DIRECTIONS[(CARDINAL_DIRECTIONS.indexOf(orientation) + 1) % 4]
+      orientation = (orientation + 1) % 4
     } else if (letter === 'L') {
-      orientation = CARDINAL_DIRECTIONS[(CARDINAL_DIRECTIONS.indexOf(orientation) - 1) % 4]
+      orientation = (orientation + 3) % 4
     }
   }
 
   function walk (number) {
-    if (orientation === 'North') {
+    if (orientation === 0) {
       y = y + number
-    } else if (orientation === 'East') {
+    } else if (orientation === 1) {
       x = x + number
-    } else if (orientation === 'South') {
+    } else if (orientation === 2) {
       y = y - number
-    } else if (orientation === 'West') {
+    } else if (orientation === 3) {
       x = x - number
     } else {
       console.log('Invalid orientation')

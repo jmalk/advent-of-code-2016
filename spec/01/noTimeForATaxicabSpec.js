@@ -9,5 +9,9 @@ describe('Rectilinear distance calculator', function () {
     instructions = 'R2, R2, R2'
     distance = rectilinearDistanceFromOrigin(instructions)
     expect(distance).toBe(2)
+
+    instructions = 'L2'
+    distance = rectilinearDistanceFromOrigin(instructions)
+    expect(distance).toBe(2)
   })
 })
